@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Blog Writer · Nived NS</title>
+  <meta name="description" content="Turn a topic and a keyword into an SEO-friendly blog article with a built-in SEO scorecard. Works offline; optional live model.">
+  <meta property="og:title" content="AI Blog Writer">
+  <meta property="og:description" content="SEO-friendly blog drafts from a topic and keyword, with a scorecard.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%23d9531e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>AI Blog Writer</h1>
+      <p>Topic and keyword in, SEO-friendly article out.</p>
+    </div>
+    <span id="mode-badge" class="badge demo">Demo mode · offline</span>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="brief-h">
+      <h2 id="brief-h">Brief</h2>
+      <form id="brief-form" novalidate>
+        <label for="topic">Topic</label>
+        <textarea id="topic" rows="3" placeholder="What is the article about?"></textarea>
+        <label for="keyword">Target keyword</label>
+        <input id="keyword" type="text" placeholder="e.g. remote team productivity">
+        <div class="grid2">
+          <div>
+            <label for="audience">Audience</label>
+            <input id="audience" type="text" placeholder="readers">
+          </div>
+          <div>
+            <label for="tone">Tone</label>
+            <select id="tone"></select>
+          </div>
+        </div>
+        <label for="length">Length</label>
+        <select id="length"></select>
+        <div class="row">
+          <button type="submit" id="generate">Write article</button>
+          <button type="button" class="ghost" id="sample">Load sample</button>
+        </div>
+        <p id="error" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+    <section class="card" aria-labelledby="out-h">
+      <div class="row between">
+        <h2 id="out-h">Article</h2>
+        <button type="button" class="ghost" id="copy">Copy Markdown</button>
+      </div>
+      <p id="copy-status" class="hint" role="status"></p>
+      <div id="scorecard" class="scorecard" hidden></div>
+      <article id="output" class="output article" aria-live="polite" hidden></article>
+      <p id="stat" class="stat"></p>
+    </section>
+  </main>
+  <div id="settings-root" class="wrap"></div>
+  <footer class="foot">Built by Nived NS</footer>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

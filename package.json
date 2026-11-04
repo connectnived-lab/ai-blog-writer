@@ -1,0 +1,18 @@
+{
+  "name": "ai-blog-writer",
+  "version": "1.0.0",
+  "description": "SEO-friendly blog article drafts from a topic and keyword, with a built-in SEO scorecard. Offline demo mode; optional live model.",
+  "private": false,
+  "type": "module",
+  "author": "Nived NS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/connectnived-lab/ai-blog-writer.git"
+  },
+  "scripts": {
+    "test": "node --test tests/unit/*.test.js",
+    "e2e": "python3 tests/e2e/smoke.py",
+    "start": "python3 -m http.server 8000"
+  }
+}

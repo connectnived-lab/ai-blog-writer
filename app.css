@@ -1,0 +1,13 @@
+.row.between { justify-content: space-between; margin-top: 0; }
+.article h1, .article h2, .article h3 { line-height: 1.25; }
+.article h1 { font-size: 1.35rem; margin: 0 0 10px; }
+.article h2 { font-size: 1.12rem; margin: 18px 0 6px; color: var(--accent); }
+.article h3 { font-size: 1rem; margin: 14px 0 4px; }
+.article p { margin: 6px 0; }
+.article { white-space: normal; }
+.scorecard { margin-top: 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.scorecard .score { font-weight: 700; margin: 0 0 6px; font-size: 1.05rem; }
+.scorecard ul { list-style: none; padding: 0; margin: 0; }
+.scorecard li { font-size: 0.9rem; padding: 3px 0; overflow-wrap: anywhere; }
+.scorecard li.pass { color: var(--ok); }
+.scorecard li.fail { color: #9b2b0d; }

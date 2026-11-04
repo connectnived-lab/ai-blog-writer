@@ -1,0 +1,15 @@
+{
+  "tests_passed": 71,
+  "e2e_passed": true,
+  "e2e_checks": 20,
+  "verified": [
+    "node --test: 71 of 71 pass",
+    "Playwright smoke at 390x844 and 1440x900: 20 of 20 checks pass, no console errors, no horizontal scroll",
+    "desktop and mobile screenshots viewed",
+    "cover rendered from the real desktop screenshot"
+  ],
+  "unverified": [
+    "GitHub Actions CI run not executed (not pushed)",
+    "live mode checked only against a mocked endpoint"
+  ]
+}
